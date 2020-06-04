@@ -1,49 +1,16 @@
-// const person: {
-//   name: string;
-//   age: number;
-// } = {
-//   name: "Shuo",
-//   age: 32,
-// };
-
-const person: {
-  name: string;
-  age: number;
-  hobbies: string[];
-  role: [number, string];
-} = {
-  name: "Shuo",
-  age: 32,
-  hobbies: ["Sports", "Cooking"],
-  role: [2, "author"],
-};
-
-person.role = [1, "haa"];
-person.role.push("asd"); // push is an expection here;
-
-let favoriteActivities: (string | number)[];
-// or : any [];
-favoriteActivities = ["Sports", 32];
-
-const a = [1, 2, 3];
-
-console.log(typeof a);
-for (const hobby of person.hobbies) {
-  console.log(hobby.toUpperCase());
-  // console.log(hobby.map());
-  // will get an error, and it's good;
+function combine(input1: number | string, input2: number | string) {
+    let result;
+    if(typeof input1 === 'number' && typeof input2 === 'number') {
+        result = input1 + input2;
+    } else {
+        result = input1.toString() + input2.toString();
+    }
+    
+    return result;
 }
 
-enum Role {
-  ADMIN,
-  STUDENT,
-  TEACHER,
-}
+const combinedAges = combine(30, 26);
+console.log(combinedAges);
 
-const person2 = {
-    role: Role.ADMIN
-}
-
-console.log(Role);
-
-console.log(person2.role === Role.TEACHER);
+const combinedNames = combine('Max', 'Anna');
+console.log(combinedNames);
