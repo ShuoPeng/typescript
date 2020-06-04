@@ -1,3 +1,3 @@
 "use strict";
-var userName = 'ShuosS';
+var userName = 'Shuoss';
 console.log(userName);

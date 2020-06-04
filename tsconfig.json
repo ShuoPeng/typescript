@@ -68,5 +68,11 @@
   },
   "exclude": [
     "node_modules" // would be the default
-  ]
+  ],
+  // "include": [ // can be file or folder
+  //   "app.ts"
+  // ],
+  // "files" : [ // for smaller project, files only
+  //   "app.ts"
+  // ]
 }
