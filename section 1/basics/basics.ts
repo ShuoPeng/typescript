@@ -1,4 +1,4 @@
-function add(n1: number, n2: number, showResults: boolean, phrase: string) {
+function badd(n1: number, n2: number, showResults: boolean, phrase: string) {
   const result = n1 + n2;
   if (showResults) {
     console.log(phrase + result);
@@ -11,4 +11,4 @@ const number2 = 2.8;
 const show = true;
 const resultPhrase = "The result is: ";
 
-add(number1, number2, show, resultPhrase);
+badd(number1, number2, show, resultPhrase);
