@@ -9,7 +9,7 @@ function printResult2(res) {
     console.log(res);
     return;
 }
-var fa;
+let fa;
 fa = add;
 // unknown 和 any 很像，但是在赋值的时候，unknown不可以赋值给特定的变量，除非做判断。
 // let a: string = 'hahaah';
@@ -30,6 +30,6 @@ fa = add;
 // }
 // never type 用作永远都不会执行下一行代码的function， 比如throw error
 function generateErrorHandling(message, code) {
-    throw ({ message: message, code: code });
+    throw ({ message, code });
 }
 generateErrorHandling('This is a bug', 404);

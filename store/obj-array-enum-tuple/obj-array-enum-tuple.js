@@ -6,7 +6,7 @@
 //   name: "Shuo",
 //   age: 32,
 // };
-var person = {
+const person = {
     name: "Shuo",
     age: 32,
     hobbies: ["Sports", "Cooking"],
@@ -14,13 +14,12 @@ var person = {
 };
 person.role = [1, "haa"];
 person.role.push("asd"); // push is an expection here;
-var favoriteActivities;
+let favoriteActivities;
 // or : any [];
 favoriteActivities = ["Sports", 32];
-var a = [1, 2, 3];
+const a = [1, 2, 3];
 console.log(typeof a);
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
+for (const hobby of person.hobbies) {
     console.log(hobby.toUpperCase());
     // console.log(hobby.map());
     // will get an error, and it's good;
@@ -31,7 +30,7 @@ var Role;
     Role[Role["STUDENT"] = 1] = "STUDENT";
     Role[Role["TEACHER"] = 2] = "TEACHER";
 })(Role || (Role = {}));
-var person2 = {
+const person2 = {
     role: Role.ADMIN
 };
 console.log(Role);

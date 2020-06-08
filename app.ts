@@ -1,31 +1,18 @@
-const userName = "Shuoss";
+class Department {
+  name: string;
+  constructor(n: string) {
+    this.name = n;
+  }
 
-console.log(userName);
-
-// default paramters:
-
-const defaultParameterTestFunction = (a: number, b: number = 1) => a + b;
-
-// const defaultParameterTestFunction = (a:number = 1, b:number) => {
-//     console.log(a);
-//     console.log(b);
-// }
-
-console.log(defaultParameterTestFunction(3));
-
-// array destructuring 
-
-const deArray = ['shuo', 32, true];
-
-let [ myName, myAge, amIcool, ...more ] = deArray;
-
-console.log(myName, myAge, amIcool, more);
-
-const deObject = {
-    firstName: 'Shuo',
-    age: 32,
-    sex: 'male'
+  describe(this: Department) {
+    console.log("Department: " + this.name);
+  }
 }
 
-let {firstName: username, age, ...rest} = deObject;
-console.log(username, age, rest);
+const accounting = new Department("Accounting");
+console.log(accounting);
+
+const accountingCopy = { describe: accounting.describe , name: 'test'};
+
+accounting.describe();
+accountingCopy.describe();
