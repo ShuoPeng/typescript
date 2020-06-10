@@ -20,6 +20,14 @@ accounting.describe();
 // accountingCopy.describe();
 accounting.addEmployee('Frank');
 accounting.addEmployee('Juan');
-accounting.employees[2] = 'Rajeev';
+//accounting.employees[2] = 'Rajeev';
 accounting.printEmployees();
-console.log(accounting.employees);
+// class Product {
+//   private isListed: boolean;
+//   constructor(public readonly name: string, private price: number) {
+//     this.isListed = true;
+//   }
+// }
+// const iphone = new Product('iPhone', 599);
+// console.log(iphone.name);
+// console.log(iphone);
